@@ -1,0 +1,1 @@
+# sodmax-mining.pro
