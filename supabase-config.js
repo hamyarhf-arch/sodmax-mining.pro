@@ -1,14 +1,6 @@
 // supabase-config.js
-// الان از متغیرهای محیطی استفاده می‌کنه
-
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-// بررسی که کلیدها وجود دارن
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    console.error('❌ خطا: کلیدهای Supabase پیدا نشد!');
-    console.error('لطفا فایل .env رو بررسی کنید');
-}
+const SUPABASE_URL = "https://enecyqmrpobmdixqtocn.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuZWN5cW1ycG9ibWRpeHF0b2NuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwNjg4MDQsImV4cCI6MjA4MTY0NDgwNH0.3zXTwFxmkPlIwy8w1Ocoxu9f7qGKkxiaFpb7o-CKo_A";
 
 const { createClient } = supabase;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
