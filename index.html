@@ -1037,41 +1037,38 @@
 </head>
 <body>
     <!-- صفحه ثبت نام -->
-    <div class="register-overlay" id="registerOverlay">
-        <div class="register-container">
-            <div class="register-header">
-                <div class="register-icon">⛏️</div>
-                <h1 class="register-title">ثبت نام در SODmAX</h1>
-                <p class="register-subtitle">برای شروع استخراج و دریافت پاداش USDT ثبت نام کنید</p>
-            </div>
-
-            <form id="registerForm">
-                <div class="form-group">
-                    <label class="form-label">نام و نام خانوادگی</label>
-                    <input type="text" class="form-input" placeholder="مثال: علی محمدی" id="fullName" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">ایمیل</label>
-                    <input type="email" class="form-input" placeholder="example@gmail.com" id="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">کد دعوت (اختیاری)</label>
-                    <input type="text" class="form-input" placeholder="کد دوست خود را وارد کنید" id="referralCode">
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-user-plus"></i>
-                    ثبت نام و شروع استخراج
-                </button>
-
-                <div style="text-align: center; margin-top: 20px; color: var(--text-secondary); font-size: 12px;">
-                    با ثبت نام، <a href="#" onclick="showTerms()" style="color: var(--primary-light);">قوانین و شرایط</a> را می‌پذیرید
-                </div>
-            </form>
-        </div>
+    <form id="registerForm">
+    <div class="form-group">
+        <label class="form-label">نام و نام خانوادگی</label>
+        <input type="text" class="form-input" placeholder="مثال: علی محمدی" id="fullName" required>
     </div>
+
+    <div class="form-group">
+        <label class="form-label">ایمیل</label>
+        <input type="email" class="form-input" placeholder="example@gmail.com" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">رمز عبور</label>
+        <input type="password" class="form-input" placeholder="حداقل ۶ کاراکتر" id="password" required minlength="6">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">کد دعوت (اختیاری)</label>
+        <input type="text" class="form-input" placeholder="کد دوست خود را وارد کنید" id="referralCode">
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="registerBtn">
+        <i class="fas fa-user-plus"></i>
+        ثبت نام و شروع استخراج
+    </button>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <button type="button" class="btn btn-outline" onclick="showLogin()" style="width: auto; font-size: 13px;">
+            قبلاً ثبت‌نام کردید؟ وارد شوید
+        </button>
+    </div>
+</form>
 
     <!-- کانتینر اصلی -->
     <div class="container" id="mainContainer" style="display: none;">
@@ -1774,6 +1771,7 @@
 <script src="supabase-service.js"></script>
 </body>
 </html>
+
 
 
 
